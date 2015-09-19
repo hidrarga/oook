@@ -5,6 +5,7 @@
 #include <sstream>
 
 #include "config.hpp"
+#include "utils.hpp"
 
 void ConfigParser::read(std::string const &filename)
 {
@@ -20,9 +21,10 @@ void ConfigParser::read(std::string const &filename)
         std::string key;
         std::string value;
         
-        stream >> key >> value;
+        stream >> key;
+        std::getline(stream, value);
         
-        Config::set(key, value);
+        Config::set(key, Utils::trim(value));
     }
     
     file.close();
