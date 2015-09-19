@@ -3,6 +3,7 @@ project(kells)
 
 find_package(Qt5 COMPONENTS Core Gui Widgets)
 find_package(Boost COMPONENTS filesystem system)
+find_package(Threads REQUIRED)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
@@ -16,6 +17,10 @@ add_definitions(${Qt5Widgets_DEFINITIONS})
 add_executable(search.cgi configparser.cpp search.cpp format.cpp renderer.cpp metadatatable.cpp publisher.cpp publishertable.cpp serietable.cpp serie.cpp tagtable.cpp metadata.cpp tag.cpp author.cpp authortable.cpp book.cpp utils.cpp data.cpp booktable.cpp table.cpp config.cpp)
 add_executable(oook configdialog.cpp configparser.cpp renderer.cpp utils.cpp config.cpp installer.cpp filesystemutils.cpp booktable.cpp table.cpp data.cpp book.cpp tag.cpp author.cpp metadata.cpp serie.cpp publisher.cpp format.cpp)
 
-target_link_libraries(oook ${Boost_LIBRARIES} Qt5::Core Qt5::Gui Qt5::Widgets)
+target_link_libraries(oook ${Boost_LIBRARIES} Qt5::Core Qt5::Gui Qt5::Widgets cppdb ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(search.cgi fcgi fcgi++ cppdb ${CMAKE_THREAD_LIBS_INIT})
+
+target_compile_features(oook PRIVATE cxx_range_for)
+target_compile_features(search.cgi PRIVATE cxx_range_for)
 
 install(TARGETS search.cgi oook RUNTIME DESTINATION bin)
