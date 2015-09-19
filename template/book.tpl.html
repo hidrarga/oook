@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <h3 id="book">{{name}}
+        <span class="small">
+            <span class="glyphicon glyphicon-star{{rating-1}}"></span>
+            <span class="glyphicon glyphicon-star{{rating-2}}"></span>
+            <span class="glyphicon glyphicon-star{{rating-3}}"></span>
+            <span class="glyphicon glyphicon-star{{rating-4}}"></span>
+            <span class="glyphicon glyphicon-star{{rating-5}}"></span>
+        </span>
+    </h3>
+    
+    <h4 id="authors">{{authors}}</h4>
+
+    <h5 id="publishers">{{publishers}}</h5>
+    
+    <h5 id="series">{{series}}</h5>
+    
+    <br />
+    
+    <ul id="downloads" class="nav nav-list">
+        {{downloads}}
+    </ul>
+</div>
+
+<div class="container-fluid">
+    <p>&nbsp;</p>
+    
+    <a href="cover.jpg" class="thumbnail col-xs-12 col-sm-4" id="cover">
+        <img src="medium.jpg" class="img-responsive" alt="{{name}}" />
+    </a>
+
+    <div class="col-xs-12 col-sm-8 text-justify" id="summary">
+        <p>{{summary}}</p>
+    </div>
+    <div class="col-xs-12 col-sm-8" id="tags">{{tags}}</div>
+</div>

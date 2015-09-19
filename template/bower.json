@@ -1,0 +1,25 @@
+{
+  "name": "kells",
+  "version": "1.0.0",
+  "authors": [
+    "HgO <hgo@batato.be>"
+  ],
+  "keywords": [
+    "opds",
+    "library",
+    "book",
+    "ebook",
+    "epub"
+  ],
+  "license": "GPLv3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}

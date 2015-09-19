@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Configuration de Oook</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+        
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        
+        <style type="text/css">
+            .input-group {
+                margin-bottom: 5px;
+            }
+            
+            .btn-group-addon {
+                color: #555;
+                background-color: #EEE;
+                border-color: #CCC;
+            }
+            
+            .btn-group-addon:hover {
+                background-color: #EEE;
+                border-color: #CCC;
+                color: #23527C;
+            }
+            
+            .align-center {
+                text-align: center;
+                margin: 0;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('[data-toggle="popover"]').popover(
+                    {
+                        animation: true, 
+                        container: 'body',
+                        placement: 'auto',
+                        title: '<span class="glyphicon glyphicon-info-sign"></span> Tooltip',
+                        html: true,
+                        trigger: 'hover focus'
+                    }
+                )
+            })
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="container-fluid">
+                <p>&nbsp;</p>
+                
+                <h2>Configuration de Oook</h2>
+                
+                
+                <form class="well form-horizontal" name="config" method="POST">
+                    {{info}}
+                    
+                    <p>Oook (Orang-outang Open Knowledge) est un serveur de bibliothèque numérique. Il permet d'afficher sous forme d'un site web statique le contenu d'une base de données crée via le logiciel libre Calibre.</p>
+                    
+                    <p>Avant de pouvoir utiliser Oook, merci de bien vouloir remplir les champs nécessaire à sa configuration.</p>
+                    
+                    <h3>Source</h3>
+                    
+                    <label for="calibre" class="control-label col-sm-4 col-md-3">Bibliothèque Calibre</label>
+                    <div class="input-group col-sm-8 col-md-9">
+                        <label for="calibre" class="input-group-addon"><span class="glyphicon glyphicon-folder-open"></span></label>
+                        <input type="text" name="calibre" id="calibre" class="form-control" value="{{calibre}}" placeholder="Chemin vers la bibliothèque Calibre" required>
+                        <a class="input-group-addon" role="button" data-toggle="popover" title="Bibliothèque Calibre" data-content="La bibliothèque Calibre est le dossier contenant tous les fichiers d'e-books enregistrés dans la base de données Calibre."><span class="glyphicon glyphicon-info-sign"></span></a>
+                    </div>
+                    
+                    <label for="database" class="control-label col-sm-4 col-md-3">Base de données Calibre</label>
+                    <div class="input-group col-sm-8 col-md-9">
+                        <label for="database" class="input-group-addon"><span class="glyphicon glyphicon-file"></span></label>
+                        <input type="text" name="database" id="database" class="form-control" value="{{database}}" placeholder="Chemin vers la base de données Calibre (optionnel)">
+                        <a class="input-group-addon" role="button" data-toggle="popover" title="Base de données Calibre (optionnel)" data-content="La base de données Calibre est le fichier contenant toutes les informations concernant les e-books de votre bibliothèque (livres, auteurs, éditeurs, étiquettes, etc.).<br /> Si non spécifiée, l'emplacement par défaut de la base de données au sein du dossier de la bibliothèque Calibre sera utilisé."><span class="glyphicon glyphicon-info-sign"></span></a>
+                    </div>
+                    
+                    <h3>Destination</h3>
+                    
+                    <label for="catalog" class="control-label col-sm-4 col-md-3">Catalogue Oook</label>
+                    <div class="input-group col-sm-8 col-md-9">
+                        <label for="catalog" class="input-group-addon"><span class="glyphicon glyphicon-folder-open"></span></label>
+                        <input type="text" name="catalog" id="catalog" class="form-control" value="{{catalog}}" placeholder="Chemin vers le catalogue Oook" required>
+                        <a class="input-group-addon" role="button" data-toggle="popover" title="Catalogue Oook" data-content="Le catalogue Oook est le dossier qui contiendra votre serveur de bibliothèque numérique."><span class="glyphicon glyphicon-info-sign"></span></a>
+                    </div>
+                    
+                    <h3>Options</h3>
+                    
+                    <label for="items-per-page" class="control-label col-sm-4 col-md-3">Éléments par page</label>
+                    <div class="input-group col-sm-8 col-md-9">
+                        <label for="items-per-page" class="input-group-addon"><span class="glyphicon glyphicon-th"></span></label>
+                        <input type="text" name="items-per-page" id="items-per-page" class="form-control" placeholder="Éléments par page" value="{{items-per-page}}" required>
+                        <a class="input-group-addon" role="button" data-toggle="popover" title="Éléments par page" data-content="Indique le nombre maximum d'éléments (livres, autheurs, etc.) qui seront affichés par page."><span class="glyphicon glyphicon-info-sign"></span></a>
+                    </div>
+                    
+                    <label for="thumbnail-size" class="control-label col-sm-4 col-md-3">Taille des miniatures</label>
+                    <div class="input-group col-sm-8 col-md-9">
+                        <label for="thumbnail-size" class="input-group-addon"><span class="glyphicon glyphicon-picture"></span></label>
+                        <input type="text" name="thumbnail-size" id="thumbnail-size" class="form-control" placeholder="Taille des miniatures" value="{{thumbnail-size}}" required>
+                        <a class="input-group-addon" role="button" data-toggle="popover" title="Taille des miniatures" data-content="Indique la taille en pixels (largeur×hauteur) des miniatures des couvertures."><span class="glyphicon glyphicon-info-sign"></span></a>
+                    </div>
+                    
+                    <label for="cpver-size" class="control-label col-sm-4 col-md-3">Taille des couvertures</label>
+                    <div class="input-group col-sm-8 col-md-9">
+                        <label for="cover-size" class="input-group-addon"><span class="glyphicon glyphicon-picture"></span></label>
+                        <input type="text" name="cover-size" id="cover-size" class="form-control" placeholder="Taille des couvertures" value="{{cover-size}}" required>
+                        <a class="input-group-addon" role="button" data-toggle="popover" title="Taille des couvertures" data-content="Indique la taille en pixels (largeur×hauteur) des couvertures."><span class="glyphicon glyphicon-info-sign"></span></a>
+                    </div>
+                    
+                    <div class="align-center">
+                        <button id="submit" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-send"></span> Installer  </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+<html>

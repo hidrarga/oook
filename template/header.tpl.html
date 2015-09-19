@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="{{root}}bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="{{root}}css/style.css" rel="stylesheet" />
+        
+        <script src="{{root}}bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="{{root}}bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{{root}}">Kells</a>
+                    </div>
+                    
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="nav navbar-nav">
+                            <li class="{{author}}"><a href="{{root}}author/"><span class="glyphicon glyphicon-user"></span> Authors</a></li>
+                            <li class="{{book}}"><a href="{{root}}book/"><span class="glyphicon glyphicon-book"></span> Books</a></li>
+                            <li class="{{format}}"><a href="{{root}}format/"><span class="glyphicon glyphicon-file"></span> Formats</a></li>
+                            <li class="{{publisher}}"><a href="{{root}}publisher/"><span class="glyphicon glyphicon-bullhorn"></span> Publishers</a></li>
+                            <li class="{{rating}}"><a href="{{root}}rating/"><span class="glyphicon glyphicon-star"></span> Ratings</a></li>
+                            <li class="{{series}}"><a href="{{root}}series/"><span class="glyphicon glyphicon-folder-open"></span> Series</a></li>
+                            <li class="{{tag}}"><a href="{{root}}tag/"><span class="glyphicon glyphicon-tags"></span> Tags</a></li>
+                        </ul>
+                        <form class="navbar-form navbar-left" role="search" action="{{root}}search/search.cgi" method="GET">
+                            <div class="form-group">
+                                <input type="text" name="q" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <p>&nbsp;</p>
+            
+            <p>&nbsp;</p>
+            
+            

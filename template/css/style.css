@@ -1,0 +1,65 @@
+.navbar {
+    opacity: .9;
+}
+
+.cover .thumbnail img {
+    height: 144px;
+    width: 100px;
+}
+
+.icon .thumbnail img {
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+}
+
+.icon a.thumbnail {
+    width: 198px;
+    height: 78px;
+    overflow: hidden;
+    word-wrap: break;
+}
+
+a.thumbnail:hover {
+    text-decoration: none;
+}
+
+.cover .thumbnail,
+.icon .thumbnail {
+    margin: 10px;
+}
+
+.pagination li.first,
+.pagination li.last {
+    display: none;
+}
+
+.pagination li.next a {
+    border-radius: 0 4px 4px 0;
+}
+
+.pagination li.prev a {
+    border-radius: 4px 0 0 4px;
+}
+
+@media (max-width: 450px) {
+    .pagination li {
+        display:none;
+    }
+    
+    .pagination li.next a {
+        border-radius: 0;
+    }
+
+    .pagination li.prev a {
+        border-radius: 0;
+    }
+    
+    .pagination li.active,
+    .pagination li.prev,
+    .pagination li.next,
+    .pagination li.first,
+    .pagination li.last {
+        display: inline-block;
+    }
+}
