@@ -34,7 +34,7 @@ _metadata(),
 _formats(), 
 _nformats(0),
 _ratings(),
-_spinner(parent)
+_spinner("Installation en cours...", "", 0, 0, parent)
 {
     // First, we create the destination directory if it doesn't exist yet
     createDirectory(Config::get("catalog"));

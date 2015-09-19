@@ -88,11 +88,11 @@ void ConfigDialog::readConfig() {
 }
 
 void ConfigDialog::accept() {
-    Config::set("calibre", _ui->calibre->text().toStdString());
+    Config::set("calibre", Utils::append(_ui->calibre->text().toStdString()));
     Config::set("database", _ui->database->text().toStdString());
-    Config::set("catalog", _ui->catalog->text().toStdString());
+    Config::set("catalog", Utils::append(_ui->catalog->text().toStdString()));
     Config::set("title", _ui->title->text().toStdString());
-    Config::set("template", _ui->templates->text().toStdString());
+    Config::set("template", Utils::append(_ui->templates->text().toStdString()));
     Config::set("items_per_page", _ui->itemsPerPage->text().toStdString());
     Config::set("thumbnail_size", std::to_string(_ui->thumbnailL->value()) + "x" + std::to_string(_ui->thumbnailH->value()));
     Config::set("cover_size", std::to_string(_ui->coverL->value()) + "x" + std::to_string(_ui->coverH->value()));

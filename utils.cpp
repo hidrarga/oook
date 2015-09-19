@@ -113,7 +113,7 @@ std::map<std::string, std::string> Utils::paramsURI(std::string const& uri) {
     return params_map;
 }
 
-std::string const& Utils::append(std::string &str, char c) {
+std::string Utils::append(std::string str, char c) {
     if(str.back() != c)
         str += c;
     return str;

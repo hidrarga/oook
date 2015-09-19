@@ -55,7 +55,7 @@ public:
     static int hex(char c);
     static std::string decodeURI(std::string const& uri);
     static std::map<std::string, std::string> paramsURI(std::string const& uri);
-    static std::string const& append(std::string& str, char c = '/');
+    static std::string append(std::string str, char c = '/');
 };
 
 #endif
