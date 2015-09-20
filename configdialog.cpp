@@ -18,6 +18,8 @@ ConfigDialog::ConfigDialog(QString const& filename, QWidget *parent):
 {
     _ui->setupUi(this);
     
+    toggleAdvanced();
+    
     show();
     
     readConfig();
@@ -197,6 +199,29 @@ void ConfigDialog::selectTemplate()
     
     if(!templates.isEmpty())
         _ui->templates->setText(templates);
+}
+
+void ConfigDialog::toggleAdvanced()
+{
+    _ui->templatesLabel->setVisible(_ui->advanced->isChecked());
+    _ui->templates->setVisible(_ui->advanced->isChecked());
+    _ui->templatesButton->setVisible(_ui->advanced->isChecked());
+    _ui->itemsPerPageLabel->setVisible(_ui->advanced->isChecked());
+    _ui->itemsPerPage->setVisible(_ui->advanced->isChecked());
+    _ui->thumbnailLabel->setVisible(_ui->advanced->isChecked());
+    _ui->thumbnailH->setVisible(_ui->advanced->isChecked());
+    _ui->thumbnailL->setVisible(_ui->advanced->isChecked());
+    _ui->thumbnailSeparator->setVisible(_ui->advanced->isChecked());
+    _ui->coverLabel->setVisible(_ui->advanced->isChecked());
+    _ui->coverH->setVisible(_ui->advanced->isChecked());
+    _ui->coverL->setVisible(_ui->advanced->isChecked());
+    _ui->coverSeparator->setVisible(_ui->advanced->isChecked());
+    _ui->copyTitle->setVisible(_ui->advanced->isChecked());
+    _ui->copyTrivial->setVisible(_ui->advanced->isChecked());
+    _ui->copyNormal->setVisible(_ui->advanced->isChecked());
+    _ui->copyFull->setVisible(_ui->advanced->isChecked());
+    
+    adjustSize();
 }
 
 

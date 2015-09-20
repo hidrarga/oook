@@ -7,14 +7,20 @@
     <x>0</x>
     <y>0</y>
     <width>531</width>
-    <height>476</height>
+    <height>440</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>531</width>
+    <height>0</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Configuration de Oook (Open Orang-outan Knowledge)</string>
@@ -151,180 +157,10 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="0">
-      <widget class="QLabel" name="titleLabel">
-       <property name="text">
-        <string>Titre</string>
-       </property>
-      </widget>
-     </item>
      <item row="6" column="1">
       <widget class="QLineEdit" name="title">
        <property name="text">
         <string>Oook (Open Orang-outan Knowledge)</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="0">
-      <widget class="QLabel" name="templatesLabel">
-       <property name="text">
-        <string>Modèles</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="1">
-      <layout class="QHBoxLayout" name="templatesLayout">
-       <item>
-        <widget class="QLineEdit" name="templates"/>
-       </item>
-       <item>
-        <widget class="QPushButton" name="templatesButton">
-         <property name="text">
-          <string>...</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="8" column="0">
-      <widget class="QLabel" name="itemsPerPageLabel">
-       <property name="text">
-        <string>Éléments par page</string>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="1">
-      <widget class="QSpinBox" name="itemsPerPage">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="specialValueText">
-        <string/>
-       </property>
-       <property name="suffix">
-        <string/>
-       </property>
-       <property name="minimum">
-        <number>1</number>
-       </property>
-       <property name="maximum">
-        <number>999</number>
-       </property>
-       <property name="value">
-        <number>20</number>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="0">
-      <widget class="QLabel" name="thumbnailLabel">
-       <property name="text">
-        <string>Taille des miniatures</string>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="1">
-      <layout class="QHBoxLayout" name="thumbnailLayout">
-       <property name="spacing">
-        <number>-1</number>
-       </property>
-       <item>
-        <widget class="QSpinBox" name="thumbnailL">
-         <property name="suffix">
-          <string> px</string>
-         </property>
-         <property name="maximum">
-          <number>999</number>
-         </property>
-         <property name="value">
-          <number>100</number>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="thumbnailSeparator">
-         <property name="text">
-          <string>×</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QSpinBox" name="thumbnailH">
-         <property name="suffix">
-          <string> px</string>
-         </property>
-         <property name="maximum">
-          <number>999</number>
-         </property>
-         <property name="value">
-          <number>144</number>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="10" column="0">
-      <widget class="QLabel" name="coverLabel">
-       <property name="text">
-        <string>Taille des couvertures</string>
-       </property>
-      </widget>
-     </item>
-     <item row="10" column="1">
-      <layout class="QHBoxLayout" name="coverLayout">
-       <property name="spacing">
-        <number>-1</number>
-       </property>
-       <item>
-        <widget class="QSpinBox" name="coverL">
-         <property name="suffix">
-          <string> px</string>
-         </property>
-         <property name="maximum">
-          <number>999</number>
-         </property>
-         <property name="value">
-          <number>380</number>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="coverSeparator">
-         <property name="text">
-          <string>×</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QSpinBox" name="coverH">
-         <property name="suffix">
-          <string> px</string>
-         </property>
-         <property name="maximum">
-          <number>999</number>
-         </property>
-         <property name="value">
-          <number>542</number>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="11" column="0">
-      <widget class="QLabel" name="copyTitle">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Copie</string>
-       </property>
-       <property name="margin">
-        <number>10</number>
        </property>
       </widget>
      </item>
@@ -394,20 +230,201 @@
        </item>
       </layout>
      </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="copyTitle">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Copie</string>
+       </property>
+       <property name="margin">
+        <number>10</number>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <layout class="QHBoxLayout" name="coverLayout">
+       <property name="spacing">
+        <number>-1</number>
+       </property>
+       <item>
+        <widget class="QSpinBox" name="coverL">
+         <property name="suffix">
+          <string> px</string>
+         </property>
+         <property name="maximum">
+          <number>999</number>
+         </property>
+         <property name="value">
+          <number>380</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="coverSeparator">
+         <property name="text">
+          <string>×</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="coverH">
+         <property name="suffix">
+          <string> px</string>
+         </property>
+         <property name="maximum">
+          <number>999</number>
+         </property>
+         <property name="value">
+          <number>542</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="coverLabel">
+       <property name="text">
+        <string>Taille des couvertures</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <layout class="QHBoxLayout" name="thumbnailLayout">
+       <property name="spacing">
+        <number>-1</number>
+       </property>
+       <item>
+        <widget class="QSpinBox" name="thumbnailL">
+         <property name="suffix">
+          <string> px</string>
+         </property>
+         <property name="maximum">
+          <number>999</number>
+         </property>
+         <property name="value">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="thumbnailSeparator">
+         <property name="text">
+          <string>×</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="thumbnailH">
+         <property name="suffix">
+          <string> px</string>
+         </property>
+         <property name="maximum">
+          <number>999</number>
+         </property>
+         <property name="value">
+          <number>144</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="thumbnailLabel">
+       <property name="text">
+        <string>Taille des miniatures</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QSpinBox" name="itemsPerPage">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="specialValueText">
+        <string/>
+       </property>
+       <property name="suffix">
+        <string/>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>999</number>
+       </property>
+       <property name="value">
+        <number>20</number>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="itemsPerPageLabel">
+       <property name="text">
+        <string>Éléments par page</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <layout class="QHBoxLayout" name="templatesLayout">
+       <item>
+        <widget class="QLineEdit" name="templates"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="templatesButton">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="templatesLabel">
+       <property name="text">
+        <string>Modèles</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="titleLabel">
+       <property name="text">
+        <string>Titre</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Help|QDialogButtonBox::Ok</set>
-     </property>
-     <property name="centerButtons">
-      <bool>false</bool>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QCheckBox" name="advanced">
+       <property name="text">
+        <string>Afficher les options avancées</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+       <property name="centerButtons">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>
@@ -426,7 +443,6 @@
   <tabstop>copyTrivial</tabstop>
   <tabstop>copyNormal</tabstop>
   <tabstop>copyFull</tabstop>
-  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -438,7 +454,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>256</x>
-     <y>442</y>
+     <y>432</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -454,7 +470,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>324</x>
-     <y>442</y>
+     <y>432</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
@@ -469,8 +485,8 @@
    <slot>selectCalibre()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>518</x>
-     <y>55</y>
+     <x>524</x>
+     <y>65</y>
     </hint>
     <hint type="destinationlabel">
      <x>444</x>
@@ -485,8 +501,8 @@
    <slot>selectDatabase()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>518</x>
-     <y>76</y>
+     <x>524</x>
+     <y>94</y>
     </hint>
     <hint type="destinationlabel">
      <x>512</x>
@@ -501,8 +517,8 @@
    <slot>selectCatalog()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>518</x>
-     <y>155</y>
+     <x>524</x>
+     <y>161</y>
     </hint>
     <hint type="destinationlabel">
      <x>417</x>
@@ -517,12 +533,28 @@
    <slot>selectTemplate()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>507</x>
-     <y>216</y>
+     <x>524</x>
+     <y>254</y>
     </hint>
     <hint type="destinationlabel">
      <x>457</x>
      <y>171</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>advanced</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ConfigDialog</receiver>
+   <slot>toggleAdvanced()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>417</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>59</x>
+     <y>215</y>
     </hint>
    </hints>
   </connection>
@@ -532,5 +564,6 @@
   <slot>selectDatabase()</slot>
   <slot>selectCatalog()</slot>
   <slot>selectTemplate()</slot>
+  <slot>toggleAdvanced()</slot>
  </slots>
 </ui>

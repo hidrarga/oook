@@ -30,7 +30,7 @@ public slots:
     void selectDatabase();
     void selectCatalog();
     void selectTemplate();
-    
+    void toggleAdvanced();
 private:
     Ui::ConfigDialog *_ui;
     QString _filename;
